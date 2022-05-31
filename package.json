@@ -1,0 +1,82 @@
+{
+  "name": "magical-transition",
+  "version": "0.0.1",
+  "description": "Magical transition is a lightweight react transition library, I made it for my grandma and now she is too good at making transitions. Yaay! 🎉🍾",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -fr lib/ && babel src --out-dir lib --ignore='src/__tests__'",
+    "test": "jest --verbose",
+    "pub": "npm test && npm build && npm publish",
+    "dev": "webpack-dev-server --content-base dist/ --inline"
+  },
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/damilare69/magical-transition.git"
+  },
+  "keywords": [
+    "react",
+    "css-transition",
+    "animation",
+    "mount",
+    "unmount"
+  ],
+  "contributors": [
+    {
+      "name": "Damilare",
+      "url": "https://github.com/Damilare69/"
+    }
+  ],
+  "author": "Damilare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asbjornh/react-tiny-transition/issues"
+  },
+  "homepage": "https://github.com/asbjornh/react-tiny-transition#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.12.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "expose-loader": "^0.7.4",
+    "html-webpack-plugin": "^3.1.0",
+    "jest-cli": "^23.6.0",
+    "prop-types": "^15.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.7.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.7.0 || ^17.0.0 || ^18.0.0"
+  },
+  "jest": {
+    "rootDir": "",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  }
+}
