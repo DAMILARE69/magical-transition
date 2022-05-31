@@ -31,49 +31,47 @@ yarn add magical-transitions
 | `children `               | ` React element` | ` `      | **Required** Single React element                                |
 | `classNames `             | ` Object`        | ` `      | Classnames to use when mounting / unmounting                     |
 
-# Basic example:
+## Usage/Examples
 
-```
-import MagicalTransitions from "magical-transitions";
+```javascript
+import "./styles.css";
+import MagicalTransition from "magical-transition";
+import Demo from "./Demo";
+import { useState } from "react";
 
-...
+export default function App() {
+  const [isVisible, setIsVisible] = useState(true);
 
-<MagicalTransitions duration={500}>
-  {isVisible &&
-    <MyComponent />
-  }
-</MagicalTransitions>
+  return (
+    <div className="App">
+      <MagicalTransition>{isVisible && <Demo />}</MagicalTransition>
+      <button onClick={() => setIsVisible(!isVisible)}>Toggle Mount</button>
+    </div>
+  );
+}
 ```
 
 # css
 
 ```
 .before-enter {
-  opacity: 0;
+  transform: translate(100vw);
 }
 
 .entering {
-  transition: opacity 0.5s;
-  opacity: 1;
+  transition: all 0.5s;
+  transform: translate(0);
 }
 
 .before-leave {
-  transition: opacity 0.5s;
+  transition: all 0.5s;
 }
 
 .leaving {
-  opacity: 0;
+  transform: translate(-100vw);
 }
 ```
-## Usage/Examples
 
-```javascript
-import Component from "my-project";
-
-function App() {
-  return <Component />;
-}
-```
 ## Authors
 
 - [@Damilare](https://github.com/DAMILARE69)
@@ -107,5 +105,3 @@ This project is used by the following companies:
 
 - Company 1
 - Company 2
-
-
